@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de canciones</title>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body class="bg-light">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mr-auto navegacion">
+				<li class="nav-item active">
+				  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+					Dropdown
+				  </a>
+				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				  </div>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link disabled">Disabled</a>
+				</li>
+			  </ul>
+			  <form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2 busqueda" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			  </form>
+			</div>
+		</div>
+	  </nav>
+
+
+		<div class="container my-5">
+
+			<h3 class="display-5 font-weight-bold mb-3">Letras de Canciones</h3>
+			<hr>
+			<h4 class="display-5 font-weight-bold mb-3">Busqueda</h4>
+			<small class="text-danger">* Campos obligatorios</small>
+			<hr>
+			<form action="#" id="formulario-buscar">
+				<div class="form-group">
+						<label for="nombre"><small class="text-danger">*</small> Artista</label>
+						<input type="text" class="form-control" id="artista" placeholder="Ingrese nombre de artista">
+				</div>
+
+				<div class="form-group">
+						<label for="nombre"><small class="text-danger">* </small>Canción</label>
+						<input type="text" class="form-control" id="cancion" placeholder="Ingrese nombre canción">
+				</div>
+	
+				<input type="submit" value="Buscar" id="submit" class="btn btn-primary">
+			
+			</form>
+
+			<div class="alert alert-secondary my-5 letra-resultado" role="alert">
+				<h2></h2>
+				<hr>
+                <div id="resultado"></div>
+			</div>
+
+			
+			<div class="alert alert-danger my-3" id="mensajes" role="alert">
+				
+			</div>
+			
+		</div>
+
+		<script type="module" src="./assets/js/app.js"></script> 
+</body>
+</html>
