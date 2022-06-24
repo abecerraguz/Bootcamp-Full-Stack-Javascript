@@ -1,11 +1,14 @@
 const http = require('http');
 const moment = require('moment'); // require
+// El date sin moment
+// const today = new Date();
 
 http.createServer((req,res)=>{
     console.log(req.url)
     const url = req.url;
 
     if(url == '/hoy'){
+
         res.write(`<html><head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +26,15 @@ http.createServer((req,res)=>{
         </body>
         </html>`)
     }
+
+    // Solución sin moment y configuracion de HTML
+    // if(url == '/hoy'){
+    //     res.statusCode = 200;
+    //     res.setHeader('Content-Type', 'text/html; chartset=utf-8');
+    //     res.write(`${today.toLocaleDateString()} en Chile`)
+    // }
+
+
     res.end();
 })
 .listen(8080,()=>{console.log('Escuchando en el puerto 8080')})
