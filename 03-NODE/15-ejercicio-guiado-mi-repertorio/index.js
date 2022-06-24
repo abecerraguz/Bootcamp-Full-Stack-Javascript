@@ -28,21 +28,7 @@ http
         if (req.url.includes('/crear')) {
             fs.writeFile(nombre, contenido, () => {
                 res.write(`
-                <html><head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <title>Archivo eliminado</title>
-    </head>
-        <body>
-            <div class="container">
-            <h1 class="h4 pt-3 pb-1">Archivo creado con éxito!</h1>
-            <hr>
-            </div>
-        </body>
-        </html>`)
+                <html><head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> <title>Archivo eliminado</title> <style>body{background: #333333;}/* .container{max-width: 30%!important;}*/ form{background-color: #515151; padding: 1.5rem 1rem; border-radius: 1rem; margin-bottom: 1.5rem;}form h5,label{color :#fff;}form hr{border-color: rgba(255, 255, 255, 0.884)!important;;}h1.h3{color: #fff!important; text-transform: uppercase; letter-spacing: 1px; line-height: 160%; font-size: 1.5rem; border-bottom: 1px solid #fff;}</style> </head> <body> <div class="container"> <h1 class="h4 pt-3 pb-1 text-white">Archivo creado con éxito!</h1> <hr> </div></body> </html>`)
                 res.end()
             })
         }

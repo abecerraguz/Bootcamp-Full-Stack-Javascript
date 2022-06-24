@@ -13,10 +13,8 @@ http
             apellido:'Fernadez'
         }]
 
-
         if(req.url.includes('/usuarios')){
             let usuario = users.find((u)=> u.rut == params.rut)
-
 
             usuario ? res.write(`
             <html><head>

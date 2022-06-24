@@ -10,9 +10,9 @@
         body{
             background: #333333;
         }
-        .container{
+        /* .container{
             max-width: 30%!important;
-        }
+        } */
 
         form{
             background-color: #515151;
@@ -43,57 +43,68 @@
     <div class="container">
 
         <h1 class="h3 my-5">Formularios de contactos se conectan al Backend</h1>
-     
         
-   
-        <form action="http://localhost:8080/crear">
-            <h5>Crear archivo</h5>
-            <hr>
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre del archivo</label>
-              <input type="text" name="nombre" id="nombre" class="form-control">
+        <div class="row">
+            <div class="col-md-3">
+                <form action="http://localhost:8080/crear" class="h-100">
+                    <h5>Crear archivo</h5>
+                    <hr>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre del archivo</label>
+                      <input type="text" name="nombre" id="nombre" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Contenido</label>
+                      <textarea name="contenido" class="form-control"></textarea>
+                    </div>
+                    <div class=" d-grid gap-2">
+                        <button type="submit" class="btn btn-primary d-block">Crear</button>
+                    </div>
+                  </form>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Contenido</label>
-              <textarea name="contenido" class="form-control"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Crear</button>
-          </form>
 
-        <!-- Segundo Formulario -->
+            <div class="col-md-3">
+                <form action="http://localhost:8080/leer" class="h-100">
+                    <h5>Leer archivo</h5>
+                    <hr>
+                    <div class="mb-3">
+                      <input type="text" name="nombre" id="nombre" class="form-control">
+                    </div>
+                    <div class=" d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Leer</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <div class="col-md-3">
+                <form action="http://localhost:8080/renombrar" class="h-100">
+                    <h5>Renombrar</h5>
+                    <hr>
+                    <div class="mb-3">
+                      <input type="text" name="nombre" id="nombre" class="form-control">
+                    </div>
+                    <div class=" d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Renombrar</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <div class="col-md-3">
+                <form action="http://localhost:8080/eliminar" class="h-100">
+                    <h5>Eliminar</h5>
+                    <hr>
+                    <div class="mb-3">
+                      <input type="text" name="nombre" id="nombre" class="form-control">
+                    </div>
+                    <div class=" d-grid gap-2">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>
         
-        <form action="http://localhost:8080/leer">
-            <h5>Leer archivo</h5>
-            <hr>
-            <div class="mb-3">
-              <input type="text" name="nombre" id="nombre" class="form-control">
+                </form>
             </div>
-            <button type="submit" class="btn btn-primary">Leer</button>
-        </form>
-
-
-    
-        <form action="http://localhost:8080/renombrar">
-            <h5>Renombrar</h5>
-            <hr>
-            <div class="mb-3">
-              <input type="text" name="nombre" id="nombre" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-primary">Renombrar</button>
-        </form>
-  
-
-        
-        <form action="http://localhost:8080/eliminar" class="mb-5">
-            <h5>Eliminar</h5>
-            <hr>
-            <div class="mb-3">
-              <input type="text" name="nombre" id="nombre" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-danger">Eliminar</button>
-        </form>
-
+        </div>
     </div>
-   
 </body>
 </html>
