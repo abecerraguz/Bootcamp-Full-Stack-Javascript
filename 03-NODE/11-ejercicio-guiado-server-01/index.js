@@ -27,12 +27,18 @@ http.createServer((req,res)=>{
         </html>`)
     }
 
-    // Solución sin moment y configuracion de HTML
-    // if(url == '/hoy'){
-    //     res.statusCode = 200;
-    //     res.setHeader('Content-Type', 'text/html; chartset=utf-8');
-    //     res.write(`${today.toLocaleDateString()} en Chile`)
-    // }
+    //Solución sin moment y configuracion de HTML
+    if(url == '/hoy'){
+        
+        res.writeHead(200,{
+          'Content-Type':'text/html',
+          'charset':'UTF-8' 
+        })
+
+        // res.statusCode = 200;
+        // res.setHeader('Content-Type', 'text/html; chartset=utf-8');
+        res.write(`${today.toLocaleDateString()} en Chile`)
+    }
 
 
     res.end();

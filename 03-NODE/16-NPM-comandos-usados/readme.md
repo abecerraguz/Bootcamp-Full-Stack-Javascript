@@ -30,6 +30,8 @@ Ahora, ¿Qué sucede si deseo actualizar una dependencia para solo aplicar parch
 ### Lista las dependencias
 1. npm list
 
+### No Olvidar agregar el tema del versionamiento....
+
 
 
 
