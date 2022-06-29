@@ -164,6 +164,7 @@ const usuarios = []
             _.forEach( usuarios, (u) => console.log(`Nombre:${u.first} - Apellido:${u.last}`) );
      
             // res.write('<ol>')
+            
             // res.write('</ol>')
         })
         .catch((e)=>{
