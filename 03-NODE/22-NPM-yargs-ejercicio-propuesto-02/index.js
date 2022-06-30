@@ -15,3 +15,6 @@ const argv = yargs
         }
     )
     .help().argv;
+
+    // node index.js adulto --edad=12
+    // node index.js adulto -e=12

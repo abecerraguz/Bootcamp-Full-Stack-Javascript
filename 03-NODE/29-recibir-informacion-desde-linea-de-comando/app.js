@@ -24,6 +24,7 @@ const { crearArchivo } = require('./helpers/multiplicar')
     [
         '/usr/local/bin/node',
         '/Users/abecerraguz/Documents/2022/CURSOS/NODEJS/03-bases-de-node/02-recibir-informacion-desde-linea-de-comando/app'
+        
     ]
 
     El primero argumentos devuelve 

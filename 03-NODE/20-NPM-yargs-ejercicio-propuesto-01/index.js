@@ -7,6 +7,7 @@
 // node index.js PING --numero=10
 // node index.js PING --help
 
+
 const yargs = require("yargs");
 const argv = yargs
     .command(
@@ -24,3 +25,4 @@ const argv = yargs
         }
     )
     .help().argv;
+// node index.js PING --numero=10;

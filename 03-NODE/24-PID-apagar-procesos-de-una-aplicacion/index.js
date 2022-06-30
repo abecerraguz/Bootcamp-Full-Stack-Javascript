@@ -9,6 +9,11 @@ http
 
 .listen(8080,()=> console.log('Servidor corriendo bajo el PID', process.pid))
 
+// MAC Y LINUX
 // kill -9 <pid>
+
+// WINDOW
 // taskkill /F /PID <pid>
+
+
 // killall node

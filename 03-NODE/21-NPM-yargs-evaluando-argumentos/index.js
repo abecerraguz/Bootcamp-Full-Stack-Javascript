@@ -30,7 +30,7 @@ const argv = yargs
                     err ? 
                       console.log(err) 
                       : 
-                      console.log(stdout);
+                      console.log('Servidor funcionado-->',stdout);
             })
 
             :

@@ -5,7 +5,8 @@ http
    .createServer((req,res)=>{
         const params = url.parse(req.url,true).query
         console.log('Salida de params-->',params);
-
+  
+       // http://localhost:3000/?rut=123456789
 
         let users = [{
             rut:'123456789',
@@ -14,7 +15,8 @@ http
         }]
 
         if(req.url.includes('/usuarios')){
-            let usuario = users.find((u)=> u.rut == params.rut)
+
+            let usuario = users.find( (u)=> u.rut == params.rut  )
 
             usuario ? res.write(`
             <html><head>
